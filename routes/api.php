@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('factures', 'App\Http\Controllers\API\FactureController@index');
-Route::post('generatefacture/{user_id}', 'App\Http\Controllers\API\FactureController@generate');
+Route::get('factures/{reference_id}', 'App\Http\Controllers\API\FactureController@getfacture');
+Route::post('payfacture', 'App\Http\Controllers\API\FactureController@payfacture');
+Route::post('generatefacture/{reference_id}', 'App\Http\Controllers\API\FactureController@generate');
 Route::get('userfactures/{user_id}', 'App\Http\Controllers\API\FactureController@userfactures');
-Route::put('payfacture', 'App\Http\Controllers\API\FactureController@payfacture');
+Route::put('payfact', 'App\Http\Controllers\API\FactureController@payfact');

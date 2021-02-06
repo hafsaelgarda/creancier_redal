@@ -20,7 +20,6 @@ class Facture extends Eloquent
     protected $fillable = [
         'id',
         'reference_id',
-        'transaction_id',
          'statut',
          'user_id',
          'date_generation',
